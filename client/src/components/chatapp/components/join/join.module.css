@@ -26,7 +26,7 @@ body {
 }
 
 .joinInnerContainer {
-	width: 30%;
+	max-width: 400px;
 	background-color: aqua;
 	border-radius: 10px;
 	padding: 40px 30px;
@@ -40,6 +40,16 @@ body {
 	border-bottom: 2px solid white;
 	color: white;
 	font-size: 20px;
+}
+.joinInput1 {
+	padding: 15px 20px;
+	width: 100%;
+	background-color: inherit;
+	border: none;
+	border-bottom: 2px solid white;
+	color: white;
+	font-size: 20px;
+	margin-top: 40px;
 }
 
 .heading {
@@ -58,13 +68,10 @@ body {
 	display: inline-block;
 	border: none;
 	width: 100%;
-}
-
-.mt-20 {
 	margin-top: 40px;
 }
 
-.home-button {
+.homebutton {
 	position: absolute;
 	top: 2%;
 	left: 2%;
@@ -97,4 +104,10 @@ a:hover {
 
 button:focus {
 	outline: 0;
+}
+
+@media (max-width: 500px) {
+	.joinOuterContainer {
+		background-image: none;
+	}
 }

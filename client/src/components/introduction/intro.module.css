@@ -1,8 +1,10 @@
 .main {
-	position: relative;
-	top: 7rem;
-	left: 16rem;
+	margin-top: 7rem;
+	margin-left: 16rem;
 	color: aliceblue;
+	margin-bottom: 5rem;
+
+	font-family: "Montserrat", sans-serif;
 }
 
 .intro1 {
@@ -27,4 +29,117 @@ h1 {
 p {
 	font-size: 20px;
 	line-height: 1.5;
+}
+
+@media screen and (max-width: 1000px) {
+	.main {
+		margin-top: 3rem;
+		margin-left: 7rem;
+		color: aliceblue;
+		margin-bottom: 5rem;
+
+		font-family: "Montserrat", sans-serif;
+	}
+
+	.intro1 {
+		max-width: 400px;
+	}
+	.intro2 {
+		max-width: 400px;
+		margin-top: 50px;
+	}
+
+	h1,
+	p {
+		padding: 0;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 25px;
+		line-height: 2;
+	}
+
+	p {
+		font-size: 15px;
+		line-height: 1.5;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.main {
+		margin-top: 3rem;
+		margin-left: 4rem;
+		color: aliceblue;
+		margin-bottom: 5rem;
+
+		font-family: "Montserrat", sans-serif;
+	}
+
+	.intro1 {
+		max-width: 300px;
+	}
+	.intro2 {
+		max-width: 300px;
+		margin-top: 50px;
+	}
+
+	h1,
+	p {
+		padding: 0;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 22px;
+		line-height: 2;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.main {
+		margin-top: 3rem;
+		margin-left: 3rem;
+		color: aliceblue;
+		margin-bottom: 5rem;
+
+		font-family: "Montserrat", sans-serif;
+	}
+
+	.intro1 {
+		max-width: 200px;
+	}
+	.intro2 {
+		max-width: 200px;
+		margin-top: 50px;
+	}
+
+	h1,
+	p {
+		padding: 0;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 21px;
+		line-height: 2;
+	}
+
+	p {
+		font-size: 12px;
+		line-height: 1.5;
+	}
+}
+
+ul .features {
+	list-style: none;
+}
+
+.features li {
+	margin-top: 20px;
 }

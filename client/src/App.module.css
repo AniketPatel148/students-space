@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
 .app {
-	height: 100vh;
+	height: 100%;
 	background-color: rgba(106, 25, 125, 0.6);
 }
 
@@ -11,18 +13,17 @@
 	display: block;
 	background-image: url("./components/assets/intro.png");
 
-	height: 800px;
+	height: 100%;
 }
 
 .navItems {
 	display: flex;
-	flex: 1 1;
 	justify-content: space-around;
 	height: 10%;
 	align-items: center;
 
 	color: aliceblue;
-	font-family: sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-size: 40px;
 	font-weight: bold;
 
@@ -39,4 +40,67 @@
 
 a {
 	padding: 15px;
+}
+
+.toggleIcon {
+	height: 26px;
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: column;
+	cursor: pointer;
+	width: 35px;
+	padding: 2px;
+	justify-content: space-around;
+	border: 0.5px solid white;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.toggleIconLine {
+	width: 25px;
+	height: 3px;
+	background-color: aliceblue;
+}
+
+.sidebar {
+	display: flex;
+	height: 100%;
+	position: fixed;
+	background-color: purple;
+	z-index: 100;
+}
+
+.sidebar ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: black;
+	font-size: 20px;
+	font-family: montserrat;
+	font-weight: 700;
+	z-index: 500;
+	align-items: center;
+}
+@media screen and (max-width: 1300px) {
+	.navItems {
+		font-size: 30px;
+	}
+
+	.navItems ul {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.navItems ul {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.toggleIcon,
+	.sidebar {
+		display: none;
+	}
 }

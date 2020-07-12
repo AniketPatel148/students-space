@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./join.css";
+import styles from "./join.module.css";
 
 export default function SignIn() {
 	const [name, setName] = useState("");
 	const [room, setRoom] = useState("");
 
 	return (
-		<div className="joinOuterContainer">
-			<div className="home-button">
+		<div className={styles.joinOuterContainer}>
+			<div className={styles.homebutton}>
 				<a href="/"> Home</a>
 			</div>
-			<div className="joinInnerContainer">
-				<h1 className="heading">Join</h1>
+			<div className={styles.joinInnerContainer}>
+				<h1 className={styles.heading}>Join</h1>
 				<div>
 					<input
 						placeholder="Name"
-						className="joinInput"
+						className={styles.joinInput}
 						type="text"
 						onChange={(event) => setName(event.target.value)}
 					/>
@@ -25,7 +25,7 @@ export default function SignIn() {
 				<div>
 					<input
 						placeholder="Room"
-						className="joinInput mt-20"
+						className={styles.joinInput1}
 						type="text"
 						onChange={(event) => setRoom(event.target.value)}
 					/>
@@ -34,7 +34,7 @@ export default function SignIn() {
 					onClick={(e) => (!name || !room ? e.preventDefault() : null)}
 					to={`/chat?name=${name}&room=${room}`}
 				>
-					<button className={"button mt-20"} type="submit">
+					<button className={styles.button} type="submit">
 						Sign In
 					</button>
 				</Link>

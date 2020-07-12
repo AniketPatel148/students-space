@@ -4,10 +4,14 @@
 	text-align: center;
 	height: 100vh;
 	align-items: center;
+
+	background-image: url("../assets/library.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 .joinInnerContainer {
-	width: 30%;
+	max-width: 400px;
 	background-color: aqua;
 	border-radius: 10px;
 	padding: 40px 30px;
@@ -40,7 +44,7 @@
 	width: 100%;
 }
 
-button:before {
+.button:before {
 	content: "Send";
 }
 
@@ -48,7 +52,7 @@ button:before {
 	margin-top: 40px;
 }
 
-.home-button {
+.homebutton {
 	position: absolute;
 	top: 2%;
 	left: 2%;
@@ -76,6 +80,12 @@ a:hover {
 
 	.joinInnerContainer {
 		width: 90%;
+	}
+}
+
+@media (max-width: 500px) {
+	.joinOuterContainer {
+		background-image: none;
 	}
 }
 

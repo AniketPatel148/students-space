@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./Input.css";
+import styles from "./Input.module.css";
 
 const Input = ({ setMessage, sendMessage, message }) => (
-	<form className="form">
+	<form className={styles.form}>
 		<input
-			className="input"
+			className={styles.input}
 			type="text"
 			placeholder="Type a message..."
 			value={message}
@@ -14,7 +14,7 @@ const Input = ({ setMessage, sendMessage, message }) => (
 				event.key === "Enter" ? sendMessage(event) : null
 			}
 		/>
-		<button className="sendButton" onClick={(e) => sendMessage(e)}>
+		<button className={styles.sendButton} onClick={(e) => sendMessage(e)}>
 			Send
 		</button>
 	</form>

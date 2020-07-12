@@ -11,9 +11,9 @@ export default function ContactUs() {
 		emailjs
 			.sendForm(
 				"gmail",
-				"template_NtpkDAFc",
+				process.env.TEMPELATE_ID,
 				e.target,
-				"user_RYHmMFfsUwQRzX1cMMKp3"
+				process.env.USER_ID
 			)
 			.then(
 				(result) => {
@@ -26,13 +26,13 @@ export default function ContactUs() {
 	}
 
 	return (
-		<div className="joinOuterContainer">
-			<div className="home-button">
+		<div className={styles.joinOuterContainer}>
+			<div className={styles.homebutton}>
 				<a href="/"> Home</a>
 			</div>
-			<div className="joinInnerContainer">
-				<h1 className="heading">Drop your mail here</h1>
-				<form className="contact-form" onSubmit={sendEmail}>
+			<div className={styles.joinInnerContainer}>
+				<h1 className={styles.heading}>Drop your mail here</h1>
+				<form className={styles.contactform} onSubmit={sendEmail}>
 					<div className={styles.input}>
 						<label>Name</label>
 						<input type="text" name="user_name" />
